@@ -1,0 +1,14 @@
+prefix(/WEB-INF/views/) + 파일명 + suffix(.jsp)
+
+-> /WEB-INF/views/home.jsp
+
+RequestMapping과 GetMapping/PostMapping의 차이
+- RequestMapping은 클래스와 메소드에서 모두 사용.
+- Get/PostMapping은 메소드에만 사용.
+
+분류된 카테고리 사이트의 경우 컨트롤러에 RequestMapping을 
+사용하여 기능을 분류하는 데 활용 가능.
+
+Static Resources(정적 자원 관리)
+	image, css, js의 저장 위치
+	- webapp/resources 하위에 저장.

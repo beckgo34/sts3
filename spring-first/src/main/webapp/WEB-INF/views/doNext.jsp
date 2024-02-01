@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>두번째</title>
 </head>
 <body>
-<h1>첫번째로 이동한 페이지</h1>
-<a href="second">[이동]</a>
+<h1>두번째 이동한 페이지</h1>
 </body>
 </html>
