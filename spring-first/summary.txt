@@ -12,3 +12,7 @@ RequestMapping과 GetMapping/PostMapping의 차이
 Static Resources(정적 자원 관리)
 	image, css, js의 저장 위치
 	- webapp/resources 하위에 저장.
+	
+Server Port 변경
+	Server > Tomcat v9.0 Server... > server.xml
+	64번째 줄에서 port="8080"을 다른 번호로 변경
