@@ -3,6 +3,8 @@ package com.icia.jsp01;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -55,16 +57,41 @@ public class HomeController {
 	}
 	
 	@GetMapping("send")
-	public String sendData(@RequestParam("id") String id,
-						   @RequestParam("num1") int num1,
-						   @RequestParam("num2") int num2) {
+	public String sendData(String id, int num1, int num2) {
 		log.info("sendData()");
 		
 		log.info("id: " + id);
 		log.info("num1: " + num1);
 		log.info("num2: " + num2);
 		
+		return "redirect:/";
+	}
+	
+	@GetMapping("login")
+	public String loginProc(String id, String pwd) {
+		log.info("loginProc()");
+		log.info("id : " + id);
+		log.info("pwd : " + pwd);
+		
 		return "home";
+	}
+	
+	@PostMapping("dtoSend")
+	public String dtoSend(DataDto data, Model model) {
+		log.info("dtoSend()");
+		model.addAttribute("person1", data);
+		
+		return "home";
+	}
+	
+	@GetMapping("pathSend/{data1}/{data2}")
+	public String pathSend(@PathVariable String data1,
+						   @PathVariable String data2) {
+		log.info("pathSend()");
+		log.info("pathSend, data1: " + data1);
+		log.info("pathSend, data2: " + data2);
+		
+		return "redirect:/";
 	}
 	
 } // class end

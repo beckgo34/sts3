@@ -96,6 +96,13 @@ Front-end -> Back-end 데이터 전송.
 	@RequestParam은 생략이 가능함
 	- 반드시 식별자와 변수명이 동일해야함.(자동 형변환도 처리)	
 	
+Post 방식으로 전송하는 경우
+	전송하는 데이터가 노출되지 않아야 할 경우.
+	많은 양의 데이터를 전송하는 경우. 	
+	
+PathVariable 방식
+	uri에 데이터를 함께 보내는 방식.(parameter와는 다른 방식)
+	uri/{data}	
 	
 3. JSTL(Jsp Standard Tag library)
 
