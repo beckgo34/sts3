@@ -1,37 +1,31 @@
 package com.icia.jsp01;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
-/**
- * Handles requests for the application home page.
- */
+import com.icia.jsp01.dto.DataDto;
+
+import lombok.extern.slf4j.Slf4j;
+
 @Controller
+@Slf4j
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@GetMapping("/")
+	public String home(Model model) {
+		log.info("home()");
+		// front-end로 데이터를 보낼 때 사용하는 객체 - Model
+		// DispatcherServlet이 생성하여 보내는 객체 
+		model.addAttribute("data", "서버에서 보내는 문자열"); //문자열
+		model.addAttribute("num", 100); //숫자(정수)
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		DataDto dataDto = new DataDto();
+		dataDto.setCode(1);
+		dataDto.setStrData("홍길동");
+		dataDto.setNumData(23);
+		dataDto.setDateData("2000-01-05");
+		model.addAttribute("person1", dataDto); // 객체(dto)
 		
 		return "home";
 	}
