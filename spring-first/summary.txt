@@ -16,3 +16,26 @@ Static Resources(정적 자원 관리)
 Server Port 변경
 	Server > Tomcat v9.0 Server... > server.xml
 	64번째 줄에서 port="8080"을 다른 번호로 변경
+
+lombok
+	
+객체 생성 시(인스턴스 생성 시) 수행해야 할 작업을 지정하는 특수 메소드
+	
+class A{}
+
+A ainst = new A();
+	
+	접근제어자 이름(파라미터){ }
+	public - 메소드
+	protected 
+	default
+	private - 멤버변수
+	
+getter, setter method
+
+Object class
+toString
+
+
+EL(Expression Language) - 표현언어
+JSTL(Jsp Standard Tag Library) - JSP 표준 태그 라이브러리
