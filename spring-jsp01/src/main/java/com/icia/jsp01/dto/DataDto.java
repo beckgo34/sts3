@@ -12,7 +12,4 @@ public class DataDto {
 	private String strData;
 	private int numData;
 	private String dateData;
-	
-	
-	
 }

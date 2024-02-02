@@ -18,6 +18,6 @@
 <P> 이름 : ${person1.strData}</P>
 <P> 나이 : ${person1.numData}</P>
 <P> 생일 : ${person1.dateData}</P>
-<hr>
+<a href="mavCase">[이동]</a>
 </body>
 </html>
