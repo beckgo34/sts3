@@ -1,0 +1,24 @@
+1. pom.xml에 버전 변경 및 추가 라이브러리 작성
+2. project Facets 변경
+3. web.xml 인코딩 필터 작성
+
+Builder 란
+	자바코드를 기계어로 변환(컴파일)하고,
+	프로그램 실행에 필요한 라이브러리를 포함(링크)
+	최종적으로 프로그램을 완성하는 도구.
+	1) Maven - pom.xml에 라이브러리를 설정. xml 기반.
+	2) Gradle - bulid.gradle에 라이브러리 설정. text 기반.
+	
+JSTL(Jsp Standard Tag Library)
+	Tag Library : 자바의 코드를 html 태그 형식으로 처리하도록 제공하는 
+				  라이브러리.
+
+JSP 구성 요소
+1. 지시자 
+2. 스크립트(자바코드 작성을 위한 부분)
+	-Scriptlet(스크립트릿) - 자바코드 작성 영역ㄴ
+	-Expression(표현식)	- 출력용
+	-Declaration(선언부) - 메소드 정의용 영역
+3. EL
+4. Tag Library(기본 Action tag, JSTL)
+5. 기본 객체(request, response, session 등)
