@@ -68,7 +68,21 @@ Core 라이브러리
 	 		- items : 배열 형태의 데이터를 입력하는 속성
 	 		- varStatus : 반복 상태에 대한 정보를 저하는 status를 활용하기 위한
 	 					변수 설정 속성.
-				 					
+
+Format 라이브러리
+	날짜와 시간, 숫자를 출력할 때 형식을 지정하기 위한 라이브러리
+	
+	formatDate : 날짜와 시간 출력 형식 지정
+		주요 속성
+		- value : 날짜 데이터(Date 객체)
+		- type : 날짜와 시간 구분(date - 날짜, time - 시간, both - 둘다)
+		- dateStyle : 날짜 출력 형식
+			full, long , medium, short
+		- timeStyle : 시간 출력 형식
+			full, long, medium, short
+		- pattern : 작성자 임의의 형식 지정
+	
+	formatNumber : 숫자 출력 형식 지성			 					
 	 
 	 
 	 

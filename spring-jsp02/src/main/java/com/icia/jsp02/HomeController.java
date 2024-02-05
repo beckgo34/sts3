@@ -49,4 +49,11 @@ public class HomeController {
 		return "jstl01";
 	}
 	
-}
+	@GetMapping("today")
+	public String today() {
+		log.info("today()");
+		
+		return "today";
+	}
+	
+}// class end
