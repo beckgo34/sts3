@@ -6,6 +6,7 @@ import com.icia.movieinfo.dto.MovieDto;
 
 public interface MovieDao {
 	List<MovieDto> getMovieList();
+	
 }
 
 // java <-> Mybatis(xml)

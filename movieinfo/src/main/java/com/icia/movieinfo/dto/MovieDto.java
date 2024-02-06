@@ -1,12 +1,16 @@
 package com.icia.movieinfo.dto;
 
+import org.apache.ibatis.type.Alias;
 import org.springframework.jmx.export.naming.IdentityNamingStrategy;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@Alias("movie")
+@ToString
 public class MovieDto {
 	private int m_code;
 	private String m_name; //제목 
