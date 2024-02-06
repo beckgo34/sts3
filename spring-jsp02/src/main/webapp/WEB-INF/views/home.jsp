@@ -60,5 +60,6 @@
 		%>
 	</table>
 	<a href="jstl_1">[이동]</a>
+	<jsp:include page="today.jsp" />
 </body>
 </html>
