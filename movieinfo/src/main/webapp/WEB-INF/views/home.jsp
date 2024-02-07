@@ -43,7 +43,7 @@
 								</c:if>
 							</a>
 							<div class="info=pre">
-								<div class="title-pre">
+								<div class="title-pre">      
 									<a href="detail?m_code=${mitem.m_code}">
 										${mitem.m_name}
 									</a>
@@ -55,6 +55,11 @@
 					</c:forEach>
 				</c:if>
 			</div>
+			
+			<div class="paging-area">
+				<div class="paging">${paging}</div>
+			</div>
+			
 		</div>
 		
 		<jsp:include page="footer.jsp"/>
