@@ -28,4 +28,10 @@ public class HomeController {
 		return view;
 	}
 	
-}
+	@GetMapping("writeFrm")
+	public String writeFrm() {
+		log.info("writeFrm()");
+		return "writeFrm";
+	}
+	
+}// class end

@@ -124,6 +124,45 @@ Mabatis 운영 방식
 		SELECT * FROM mlist
 		WHERE ${colmn_name} like concat('%', #{keyword}, '%');
 
+form을 통한 데이터 전송
+	Multipart 데이터 = 텍스트 + 파일(2진데이터)
+
+	form 태그에 반드시 enctype을 작성. 속성값은 "multipart/form-data".
+
+	파일 업로드 용 라이브러리(dependency) - Maven repository에서.
+	1) commons-io
+	2) commons-fileuplad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
