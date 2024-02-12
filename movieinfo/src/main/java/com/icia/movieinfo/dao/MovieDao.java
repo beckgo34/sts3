@@ -14,6 +14,9 @@ public interface MovieDao {
 	// 전체 영화 개수 구하기
 	@Select("SELECT count(*) FROM movietbl")
 	int cntMovie();
+	
+	// 영화 정보 입력
+	void insertMovie(MovieDto movie);
 }
 
 // java <-> Mybatis(xml)
