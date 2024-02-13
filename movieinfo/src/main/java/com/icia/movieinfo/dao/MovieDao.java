@@ -21,6 +21,8 @@ public interface MovieDao {
 	// 영화 정보 상세보기
 	MovieDto selectMovie(Integer m_code);
 	
+	// 영화 정보 수정
+	void updateMovie(MovieDto movie);
 	
 	
 }// interface end

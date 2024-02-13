@@ -21,4 +21,13 @@
 		SELECT * FROM mlist
 		WHERE m_code=#{m_code}
 		</select>
+		
+	<update id="updateMovie" parameterType="movie">
+		UPDATE movietbl 
+		SET m_name=#{m_name}, m_director=#{m_director}, 
+			m_nation=#{m_nation}, m_genre=#{m_genre},
+			m_actor=#{m_actor}, m_open=#{m_open},
+			m_synopsis=#{m_synopsis}, p_sysname=#{p_sysname}
+		WHERE m_code=#{m_code}
+	</update>
 </mapper>

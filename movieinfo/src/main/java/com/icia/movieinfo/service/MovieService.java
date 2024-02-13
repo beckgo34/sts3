@@ -131,6 +131,30 @@ public class MovieService {
 		//model에 담기
 		model.addAttribute("movie", movie);
 	}
+
+	public String movieUpdate(List<MultipartFile> files, 
+							  MovieDto movie, 
+							  HttpSession session, 
+							  RedirectAttributes rttr) {
+		log.info("movieUpdate()");
+		String msg = null;
+		String view = null;
+		String poster = movie.getP_sysname();// 기존 파일(포스터)
+		
+		try {
+			if(!files.get(0).isEmpty()) {
+				fileUpload(files, session, movie);
+			}
+			mDao.updateMovie(movie);
+			
+			// 기존 파일 삭제(포스터 삭제)
+			
+		} catch (Exception e) {
+
+		}
+		
+		return view;
+	}
 	
 	
 	
