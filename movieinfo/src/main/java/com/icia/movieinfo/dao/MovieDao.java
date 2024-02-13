@@ -24,7 +24,7 @@ public interface MovieDao {
 	// 영화 정보 수정
 	void updateMovie(MovieDto movie);
 	
-	// 영화 목록 삭제
+	// 영화 정보 삭제
 	void delete(Integer m_code);
 	
 	

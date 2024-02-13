@@ -47,9 +47,10 @@ public class MovieService {
 
 		// 페이정 처리
 		String pageHtml = getpaging(pageNum, listCnt);
-
 		model.addAttribute("paging", pageHtml);
 
+		session.setAttribute("pageNum", pageNum);
+		
 		return "home";
 	}
 
@@ -185,8 +186,9 @@ public class MovieService {
 		String view = null;
 		String msg = null;
 		
+		// 영화 코드로 파일명 구하기
 		MovieDto movie = mDao.selectMovie(m_code);
-		String poster= movie.getP_sysname();
+		String poster= movie.getP_sysname(); // 파일명
 		
 		try {
 			if(poster != null) {
@@ -200,7 +202,8 @@ public class MovieService {
 			msg = "삭제 실패";
 			view = "redirect:detil?m_code" + m_code;
 		}
-		rttr.addAttribute("msg", msg);
+//		rttr.addAttribute("msg", msg);
+		rttr.addFlashAttribute("msg", msg);
 		return view;
 	}
 	

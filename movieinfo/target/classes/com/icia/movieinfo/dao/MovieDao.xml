@@ -31,7 +31,7 @@
 		WHERE m_code=#{m_code}
 	</update>
 	
-	<delete id="delete" parameterType="movie">
+	<delete id="delete" parameterType="Integer">
 		DELETE FROM movietbl WHERE m_code=#{m_code}
 	</delete>
 </mapper>

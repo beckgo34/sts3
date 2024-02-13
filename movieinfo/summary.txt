@@ -183,6 +183,9 @@ Data Update 처리
 프로젝터 주제 선정 -> 프로젝트 기획(의도, 벤치마킹, 기능 선정)
 -> 스토리 보드 작성 -> 잡리스트(DB 설계) -> 구현
 
+Date Delete 처리
+	detail.jsp -> delete(url) Controller -> Service(파일 삭제) -> Dao
+
 
 
 
