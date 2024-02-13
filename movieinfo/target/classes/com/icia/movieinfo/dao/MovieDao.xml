@@ -15,4 +15,10 @@
 					 #{m_genre}, #{m_actor}, #{m_open}, 
 					 #{m_synopsis}, #{p_sysname})
 	</insert>
+	
+	<select id="selectMovie" parameterType="Integer"
+		resultType="movie">
+		SELECT * FROM mlist
+		WHERE m_code=#{m_code}
+		</select>
 </mapper>

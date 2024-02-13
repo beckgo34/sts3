@@ -122,5 +122,38 @@ public class MovieService {
 		mf.transferTo(file);// 하드디스크(경로상의 폴더)에 저장
 		movie.setP_sysname(sysname);
 	}
+	
+	// 상세보기 처리 메소드(수정처리에서도 활용)
+	public void getMovie(Integer m_code, Model model) {
+		log.info("getMovie()");
+		// DB에서 데이터 가져오기
+		MovieDto movie = mDao.selectMovie(m_code);
+		//model에 담기
+		model.addAttribute("movie", movie);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 } // class end

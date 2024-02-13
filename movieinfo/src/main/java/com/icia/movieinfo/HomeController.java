@@ -51,4 +51,11 @@ public class HomeController {
 		return view;
 	}
 	
+	@GetMapping("detail")
+	public String detail(Integer m_code, Model model) {
+		log.info("detail()");
+		mServ.getMovie(m_code, model);
+		return "detail"; // jsp 파일명
+	}
+	
 }// class end

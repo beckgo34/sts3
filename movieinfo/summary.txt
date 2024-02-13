@@ -159,6 +159,10 @@ Form에 파일 input 태그가 존재할 경우 List<MultipartFile>의 size는
 2) 파일명을 확인하는 방법
 3) 기타..(isEmpty 메소드)
 
+Interface의 멤버
+	모든 메소드 앞에는 public static을 붙인다.
+	모든 변수 앞에는 public static final을 붙인다.(상수)
+	항상 반드시 붙여야하는 것은 생략할 수 있다.ㄴ
 
 
 
