@@ -30,4 +30,8 @@
 			m_synopsis=#{m_synopsis}, p_sysname=#{p_sysname}
 		WHERE m_code=#{m_code}
 	</update>
+	
+	<delete id="delete" parameterType="movie">
+		DELETE FROM movietbl WHERE m_code=#{m_code}
+	</delete>
 </mapper>

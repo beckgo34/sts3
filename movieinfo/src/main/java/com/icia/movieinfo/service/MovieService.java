@@ -144,15 +144,63 @@ public class MovieService {
 		try {
 			if(!files.get(0).isEmpty()) {
 				fileUpload(files, session, movie);
+				
+				// 기존 파일 삭제(포스터 삭제)
+				if(poster != null) {
+					fileDelete(poster, session);
+				}
 			}
 			mDao.updateMovie(movie);
 			
-			// 기존 파일 삭제(포스터 삭제)
+			view = "redirect:detail?m_code=" + movie.getM_code();
+			msg = "수정 성공";
 			
 		} catch (Exception e) {
+			e.printStackTrace();
+			view = "redirect:updateFrm?m_code=" + movie.getM_code();
+			msg = "수정 실패";
+		}
+		rttr.addFlashAttribute("msg", msg);
+		return view;
+	}
 
+	private void fileDelete(String poster, 
+							HttpSession session) 
+									throws Exception{
+		log.info("fileDelete()");
+		
+		String realPath = session.getServletContext()
+					.getRealPath("/");
+		realPath += "resources/upload/" + poster;
+		File file = new File(realPath);
+		if(file.exists()) {
+			file.delete();
 		}
 		
+	}
+
+	public String delete(Integer m_code, 
+						 HttpSession session, 
+						 RedirectAttributes rttr) {
+		String view = null;
+		String msg = null;
+		
+		MovieDto movie = mDao.selectMovie(m_code);
+		String poster= movie.getP_sysname();
+		
+		try {
+			if(poster != null) {
+				fileDelete(poster, session);
+			}
+			mDao.delete(m_code);
+			msg = "삭제 성공";
+			view = "redirect:/?pageNum=1";
+		} catch (Exception e){
+			e.printStackTrace();
+			msg = "삭제 실패";
+			view = "redirect:detil?m_code" + m_code;
+		}
+		rttr.addAttribute("msg", msg);
 		return view;
 	}
 	

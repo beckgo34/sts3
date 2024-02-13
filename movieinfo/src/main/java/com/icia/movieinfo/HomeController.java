@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.icia.movieinfo.dto.MovieDto;
 import com.icia.movieinfo.service.MovieService;
+import com.mysql.cj.Session;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -77,4 +78,12 @@ public class HomeController {
 		return view;
 	}
 	
+	@GetMapping("delete")
+	public String delete(Integer m_code, 
+						 HttpSession session, 
+						 RedirectAttributes rttr) {
+		log.info("delete()");
+		String view = mServ.delete(m_code, session, rttr);
+		return view;
+	}
 }// class end
