@@ -78,6 +78,7 @@ public class HomeController {
 		return view;
 	}
 	
+	// 데이터 삭제 터리
 	@GetMapping("delete")
 	public String delete(Integer m_code, 
 						 HttpSession session, 
